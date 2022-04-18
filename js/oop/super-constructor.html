@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Super constructor</title>
+    </head>
+    <body>
+        <script>
+             class Employee {
+                 // Semua constructor akan bisa dipakai oleh semua turunannya
+                constructor(firstName) {
+                    this.firstName = firstName
+                }
+
+                sayHello(name) {
+                    console.info(`Hello ${this.firstName} nama saya ${name}, saya adalah employee`)
+                }
+            }
+
+            class Manager extends Employee{
+                // Saat ingin memanggil constructer disebuah class turunan itu wajib memanggil constructor yang ada di parent classnya
+                constructor(firstName, lastName) {
+                    super(firstName);
+                    this.lastName = lastName
+                }
+
+                sayHello(name) {
+                    console.info(`Hello ${this.firstName} ${this.lastName} nama saya ${name}, saya adalah Manager`)
+                }
+            }
+
+            const ichsan = new Employee("Bintang");
+            ichsan.sayHello("Ichsan")
+
+            const bintang = new Manager("Ichsan", "ilyasa");
+            bintang.sayHello("Bintang")
+
+            console.log(ichsan);
+            console.log(bintang);
+        </script>
+    </body>
+</html>

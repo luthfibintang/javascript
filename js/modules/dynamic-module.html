@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Dynamic Loading</title>
+    </head>
+    <body>
+        <input type="text" id="name">
+        <input type="button" id="sayButton" value="Say">
+
+        <script type="module">
+            document.getElementById("sayButton").onclick = function() {
+                const name = document.getElementById("name").value;
+                
+                import("./scripts/alert.js").then(function(module){
+                    module.alertHello(name)
+                })
+            }
+        </script>
+    </body>
+</html>

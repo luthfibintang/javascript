@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Hello World</title>
+    </head>
+    <body>
+        <script>
+
+            var firstName = "Azisya Luthfi";
+            var lastName = "Bintang";
+            
+            document.writeln("FullName = " + firstName + " " + lastName);
+            document.writeln("<br><br>")
+            // Pneggunaan variable menggunakan var sudah tidak direkomendasikan lagi
+            // Lebih baik menggunakan let daripada var
+            // ditahun 2015 keatas orang orang sudah menggunakan let / const
+            // Variable var dan let itu sama sama bisa diubah
+
+            let firstNamelet = "Azisya Luthfi";
+            let lastNamelet = "Bintang";
+
+            document.writeln("FullName = " + firstNamelet + " " + lastNamelet);
+            document.writeln("<br>");
+
+            lastNamelet = "Rudra"
+            document.writeln("FullName = " + firstNamelet + " " + lastNamelet);
+
+            // Const
+            // Perbedaan let/var dengan const adalah const tidak dapat diubah
+
+            const test = "Mau Pulang";
+            test = "Ga mau Pulang"; //Error
+            document.writeln("<br>");
+            document.writeln(test);
+
+            </script>
+    </body>
+</html>

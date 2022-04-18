@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Element</title>
+    </head>
+    <body>
+       <div id="content" class="Konten">
+            <h1 id="judul">Javascript DOM</h1>
+            <p id="desc">Belajar Javascript DOM</p>
+       </div>
+        <script>
+            const title = document.getElementById("judul")
+
+            title.remove();
+            document.getElementById("desc").remove();
+
+            // const cont = document.getElementById("content")
+            // console.info(cont.children);
+        </script>
+    </body>
+</html>

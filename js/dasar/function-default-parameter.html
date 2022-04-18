@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Function</title>
+    </head>
+    <body>
+        <script>
+            function person(name, gender = "Unknown"){
+                console.log(name);
+                console.log(gender)
+            };
+
+            person("Bintang", "Male");
+            person("Ichsan") // jika tidak ada akan terhitung undefined dan akan mengambil default parameter
+            person("Ardi", undefined); // Jika Undefined tetap akan mengambil default parameter
+            person("Eko", null) // nilai tidak akan default karna null sudah ada valuenya namun kosong, sedangkan undefined value kosong yang belum ditentukan
+        </script>
+    </body>
+</html>

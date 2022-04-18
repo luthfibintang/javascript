@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Web Worker</title>
+    </head>
+    <body>
+        <button id="play">Click Here</button>
+        <script>
+            function showLog(total){
+                for(let i = 0; i < total; i++){
+                    console.log(i);
+                }
+            }
+
+            document.getElementById("play").onclick = function (){
+                console.log("Start Log");
+                showLog(100000);
+                console.log("End Log")
+            }
+        </script>
+    </body>
+</html>

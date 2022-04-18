@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Symbol</title>
+    </head>
+    <body>
+        <script>
+            const firstName = Symbol("firstName");
+            const lastName = Symbol("lastName");
+
+            const person = {}
+            person[firstName] = "Luthfi";
+            person[lastName] = "Bintang";
+
+            console.log(person);
+            console.log(person[firstName]);
+            console.log(person[lastName]);
+
+            console.info(person[firstName] === person[lastName]);
+
+            // Symbol for
+        {
+            const person = {};
+            person[Symbol.for('firstName')] = "Ichsan";
+            person[Symbol.for('lastName')] = "Ilyasa";
+
+            console.info(person);
+            console.info(person[Symbol.for('firstName')]);
+            console.info(person[Symbol.for('lastName')]);
+        }
+        </script>
+    </body>
+</html>

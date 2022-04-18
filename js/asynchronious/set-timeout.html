@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Set Timeout</title>
+    </head>
+    <body>
+        <script>
+            function addElement(){
+                const header = document.createElement("h1");
+                header.textContent = "Belajar Javascript Asynchronious"
+
+                document.body.appendChild(header);
+            }
+
+            setTimeout(addElement, 5000);
+            console.info("Program selesai")
+        </script>
+    </body>
+</html>

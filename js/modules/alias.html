@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Multiple Import</title>
+    </head>
+    <body>
+        <script type="module">
+            // alias lebih baik digunakan pada import daripaada di export
+            import {fullname, total, Person as test} from "./scripts/alias.js";
+            import {Person} from "./scripts/multiple.js";
+            console.log(fullname); // Azisya Luthfi Bintang
+
+            console.log(total(12,2)); // 3
+
+
+            const p = new test();
+            p.sayHello("Bintang");
+
+            const a = new Person();
+            a.sayHello("Ceil")
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Switch</title>
+    </head>
+    <body>
+        <script>
+            // Menggunakan switch hanya berlaku operator perbandingan ==
+            const nilai = "A";
+            switch(nilai){
+                case "A":
+                   console.info("Anda Lulus Dengan Sangat Baik");
+                   break;
+                case "B" :
+                    console.info("Anda Lulus Dengan Baik");
+                    break;
+                case "C" :
+                    console.info("Anda Lulus dengan nilai pas pasan");
+                    break;
+                case "D" :
+                    console.info("Anda Tidak lulus");
+                    break;
+                default:
+                    console.info("Anda Goblok");
+           }
+
+           // Contoh apabila menggunakan if
+            if(nilai == "A"){
+                    console.info("Anda Lulus Dengan Sangat Baik");
+            } else if(nilai == "B"){
+                    console.info("Anda Lulus Dengan Baik");
+            } else if(nilai == "C"){
+                console.info("Anda Lulus Dengan Nilai pas pasan");
+            } else if (nilai == "D"){
+                console.info("Anda Tidak Lulus");
+            } else {
+                console.info("Anda Goblok");
+            }
+
+            // Menggunakan if terlihat lebih pendek dari line namun jika dibaca akan lebih mudah jika menggunakan switch
+        </script>
+    </body>
+</html>

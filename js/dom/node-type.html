@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Node Type</title>
+    </head>
+    <body>
+        Azisya Luthfi Bintang
+        <!-- INi Komentar -->
+        <h1>Ini Title</h1>
+        <p>Ini Paragraph</p>
+
+        <script>
+            const nodes = document.body.childNodes;
+            // nodes.forEach((value) => console.info(`${value} : ${value.nodeType}`)) 
+            
+            // Bisa pakai for of juga
+            for (const node of nodes){
+                console.info(`${node} : ${node.nodeType}`)
+            }
+        </script>
+    </body>
+</html>

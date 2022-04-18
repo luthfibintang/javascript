@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Event Global</title>
+    </head>
+    <body>
+        <input type="button" id="clickMe" value="Click Me">
+        <script>
+            const btnClick = document.getElementById("clickMe")
+
+            btnClick.onclick = function(){
+                alert("Ayoo u click me")
+            } // Global hanya bisa dilakukan satu kali
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Element Create</title>
+    </head>
+    <body>
+       <div id="content" class="konten"></div>
+        <script>
+            const cont = document.getElementById("content")
+            
+            const title = document.createElement("h1")
+            title.textContent = "JS DOOM"
+            cont.appendChild(title);
+
+            const desc = document.createElement("p");
+            desc.textContent = "Oke saya Belajar JavaScript DOOM";
+            cont.appendChild(desc);
+        </script>
+    </body>
+</html>

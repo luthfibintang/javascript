@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>This</title>
+    </head>
+    <body>
+        <script>
+            console.info(this); // Window
+
+            function test(){
+                console.info(this);
+                function inner() {
+                    console.info(this)
+                }
+                inner()
+            }
+            test() // Window
+
+            const person = {
+                name: "Bintang",
+                test: function (time){
+                    console.info(`Hello ${this.name}, Selamat ${time}`)
+                } // This sudah merujuk ke person
+            }
+
+            person.test("Sore")
+        </script>
+    </body>
+</html>

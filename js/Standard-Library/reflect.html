@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Reflect</title>
+    </head>
+    <body>
+        <script>
+            const person = {};
+
+            Reflect.set(person, 'firstName', 'Luthfi');
+            Reflect.set(person, 'lastName', 'Bintang');
+
+            console.info(person);
+            console.info(Reflect.get(person, "firstName")); // Luthfi
+            console.info(Reflect.get(person, "lastName")) // Bintang
+
+            console.info(Reflect.has(person, "firstName")); // True
+            console.info(Reflect.has(person, "middlename")) // false
+        </script>
+    </body>
+</html>

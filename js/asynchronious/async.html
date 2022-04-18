@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Async</title>
+    </head>
+    <body>
+        <script>
+            // Promise<string>
+            
+            //Promise Secara manual
+            function getNamePromise(){
+                return new Promise(function(resolve, reject){
+                    resolve("Bintang Promise")
+                })
+            }
+            getNamePromise().then((name) => console.log(name));
+
+            // Menggunakan async
+            async function getNameAsync(){
+                return "Azisya Luthfi Async";
+            }
+            getNameAsync().then((name) => console.info(name));
+        </script>
+    </body>
+</html>

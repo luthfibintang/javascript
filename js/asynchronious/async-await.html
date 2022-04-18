@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Async Await</title>
+    </head>
+    <body>
+        
+        <script>
+            // Promise<JSON Product>
+            function getProduct(){
+                const request = new Request("api/prodsuct.json", {
+                    method: "GET"
+                });
+
+                const response = fetch(request);
+
+                return response.then((response) => response.json()); // Mengkonversi menjadi object
+            }
+            // getProduct().then((product) => console.info(product))
+
+            // Promise<String ProductName>
+
+            // Manual Mencari name product
+            function getProductName(){
+                return new Promise(function(resolve, reject){
+                    getProduct()
+                        .then((product) => resolve(product.name))
+                        .catch((error) => resolve("Product Not Found"))
+                })
+            }
+
+            // Mencari Name Product menggunakan async await
+            async function getProductNameAsync(){
+                try {
+                    const product = await getProduct();
+                    return product.name
+                } catch (e) {
+                    return "Product Not Found"
+                }
+            }
+
+            getProductName().then((productName) => console.info(productName))
+            
+            getProductNameAsync().then((productName) => console.info(productName)) 
+            </script>
+    </body>
+</html>

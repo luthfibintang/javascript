@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Instance of</title>
+    </head>
+    <body>
+        <script>
+            class Employee {
+
+            }
+
+            class Manager extends Employee {
+
+            }
+
+            const bintang = new Employee();
+            const ichsan = new Manager();
+
+            console.info(bintang instanceof Employee); // True
+            console.info(bintang instanceof Manager); // false
+
+            console.info(ichsan instanceof Employee); // flase (jika bukan Turunan) true jika extends atau turunan
+            console.info(ichsan instanceof Manager); // True
+            
+            // Operator instanceof di class inheritance
+
+        </script>
+    </body>
+</html>

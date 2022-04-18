@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Class Super Method</title>
+    </head>
+    <body>
+        <script>
+           class Person {
+               constructor(firstName, lastName){
+                   this.firstName = firstName;
+                   this.lastName = lastName;
+               }
+
+               set fullname(value){
+                   const result = value.split(" ");
+                   this.firstName = result[0];
+                   this.lastName = result[1];
+               }
+
+               get fullname() {
+                   return `${this.firstName} ${this.lastName}`;
+               }
+
+           }
+
+           const person = new Person("Luthfi", "Bintang");
+           console.info(person.fullname);
+           console.log(person)
+
+           // set
+           person.fullname = "Ichsan Ilyasa"
+           console.info(person.fullname)
+
+           console.info(person);
+        </script>
+    </body>
+</html>

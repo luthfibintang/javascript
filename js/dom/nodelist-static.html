@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Node List Static</title>
+    </head>
+    <body>
+        <ul id="menu1">
+            <li id="first">First</li>
+            <li id="second">Second</li>
+            <li id="third">Third</li>
+        </ul>
+        <ul id="menu2">
+            <li id="satu">satu</li>
+            <li id="dua">dua</li>
+            <li id="tiga">tiga</li>
+        </ul>
+        <script>
+            const list = document.querySelectorAll("li");
+
+            const menu1 = document.getElementById("menu1");
+
+            menu1.appendChild(document.createElement("li"));
+            menu1.appendChild(document.createElement("li")); // Harusnya 8 karna ditambahkan, tapi ternyata tidak, karena querySelector bersifat static
+            
+            
+            console.log(list);
+            
+            const menu2 = document.getElementById("menu2")
+            const list2 = menu2.querySelectorAll("li");
+            console.log(list2);
+        </script>
+    </body>
+</html>

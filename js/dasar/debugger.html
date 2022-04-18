@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Arrow Function</title>
+    </head>
+    <body>
+        <script>
+            // Debugger digunakan untuk melakukan debugging
+            // debugging adalah proses mencari bug pada kode program kita
+            // dengan debugger kita bisa menghentikan kode program di posisi yang kita inginkan (breakpoint) lalu melihat semua isi variable yang ada pada kode program yang sedang berhenti
+
+            function createFullName(first, middle, last){
+                const fullname = `${first} ${middle} ${last}`;
+                return fullname;
+            }
+
+            const name = createFullName("Azisya", "Luthfi", "Bintang");
+            console.info(name);
+
+            function sum(...numbers){
+                debugger;
+                let total = 0;
+                for(number of numbers){
+                    total += number
+                }
+                return total;
+            }
+
+            console.info(sum(1,2,3))
+        </script>
+    </body>
+</html>

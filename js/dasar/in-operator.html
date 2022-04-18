@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Komentar</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                firstName: "Azisya",
+                lastName: "Bintang"
+            }
+            
+            let result = "firstName" in person; //true
+            document.writeln(`<p>${result}</p>`);
+            result = "ngasal" in person; //false
+            document.writeln(`<p>${result}</p>`);
+
+            // Warning!!!
+            //di in operator hanya mengecek apakah property/index ada atau tidak
+            // Tidak mengecek valuenya, jadi walaupun valuenya null atau undefined, maka tetap akan dianggap ada
+            const orang = {
+                name: undefined,
+                age: null
+            }
+            result = "name" in orang; // true = karna emang ada indexnya namun tidak ada valuenya
+            document.writeln(`<p>${result}</p>`);
+            result = "age" in orang; // true
+            document.writeln(`<p>${result}</p>`);
+
+            //contoh ke dua yang menggunakan array
+            const names = [undefined, "Luthfi", null]
+            result = 0 in names; // tetap akan true
+            document.writeln(`<p>${result}</p>`);
+            result = 2 in names; //true
+            document.writeln(`<p>${result}</p>`);
+
+            result = 3 in names; // false karena memang tidak ada index ke 3
+            document.writeln(`<p>${result}</p>`);
+        </script>
+    </body>
+</html>

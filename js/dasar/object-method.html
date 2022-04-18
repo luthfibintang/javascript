@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Arrow Function</title>
+    </head>
+    <body>
+        <script>
+            function sayHello(fullname){
+                alert(`Hello ${fullname}`)
+            }
+            const names = {
+                firstName: "luthfi",
+                lastName: (lname) => console.log(lname),
+                sayHello: sayHello
+            }
+
+            console.log(names.firstName);
+            names.lastName("Bintang")
+            names.sayHello("Azisya Luthfi Bintang")
+
+            // Menambahkan method ke object
+
+            const person = {
+                name: "Fifi"
+            }
+
+            person.sayHello = (name) => alert(`Hello ${name}`)
+
+            person.sayHello("Bintang")
+        </script>
+    </body>
+</html>

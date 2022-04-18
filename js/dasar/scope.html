@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Function</title>
+    </head>
+    <body>
+        <script>
+            // global scope
+            let counter = 0
+
+            // global scope
+            function hitMe(){
+                //local scope hitMe
+                counter++;
+            }
+
+            hitMe();
+            hitMe();
+
+            console.info(counter);
+
+            // LOCAL SCOPE
+            function first() {
+                let firstVariable = "First"
+            }
+
+            function second() {
+                let secondVariable = "Second"
+            }
+
+            first();
+            second();
+
+            //console.info(fristVariable); // ERROR Can't access local scope
+
+            // Nested Function Scope
+
+            function outer(){
+                let firstVariable = "First"
+
+                function second() {
+                    console.info(firstVariable); // Bisa Access variable yang diatasnya
+                }
+
+                second();
+            }
+
+            outer();
+        </script>
+    </body>
+</html>

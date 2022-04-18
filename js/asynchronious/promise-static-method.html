@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Promise</title>
+    </head>
+    <body>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td>:</td>
+                    <td id="id"></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>:</td>
+                    <td id="name"></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td>:</td>
+                    <td id="price"></td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            function getProduct(product) {
+                return new Promise(function (resolve, reject){
+                
+                    const ajax = new XMLHttpRequest();
+
+                    ajax.open("GET", `api/${product}.json`);
+                    ajax.onload = function(){
+                        if(ajax.status === 200){
+                            resolve(ajax.responseText);
+                        } else {
+                            reject(`Error Get Product with response : ${ajax.status}`);
+                        }
+                    };
+                    ajax.send()
+                })
+            }
+
+            const response = Promise.all([
+                getProduct("product"),
+                getProduct("product2"),
+                getProduct("product3")
+            ])
+
+            response.then((products) => {console.info(products)})
+            
+        </script>
+    </body>
+</html>

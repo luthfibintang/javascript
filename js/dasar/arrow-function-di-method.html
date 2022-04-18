@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Arrow Function</title>
+    </head>
+    <body>
+        <script>
+            // Arrow function tidak bisa this (Untuk syarat lainnya bisa di cek di file arrow function)
+            const greeting = {
+                name: "Bintang",
+                sayHello: (name) =>{
+                    console.info(this); // This tidak mengacu ke object
+                    console.info(`Hello ${name}`)
+                }
+            }
+
+            greeting.sayHello("Luthfi")
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Komentar</title>
+    </head>
+    <body>
+        <script>
+            // OR (||)
+            // Mengambil Nilai pertama yang truthy (true)
+            // Jika tidak ada yang true maka tidak akan diambil satupun
+
+            console.info("hello" || ""); //hello (String)
+            console.info("" || "test"); // test (String)
+            console.info("" || []); // array 
+            console.info("0" || "NOL") // 0 (String)
+            console.info(0 || "NOL") // NOL (String)
+            console.info(null || "NULL") // NULL (String)
+            console.info(undefined || "UNDEFINED") // UNDEFINED (STRING)
+            console.info(1 || "Null") // 1 (number)
+            console.info(0 || null); //null (null)
+            console.info(0 || false) // false
+
+            const person = {
+                fname: "Luthfi",
+                lname: "Bintang"
+            }
+            document.writeln(person.fname || person.lname);
+
+            // AND (&&)
+            //mengambil Nilai Pertama yang Falsy (false)
+            // Jika tidak ada yang false maka akan mengambil nilai terakhir
+            console.warn("AND");
+            console.info("hell" && "") // "" (kosong)
+            console.info("" && []) // "" (kosong)
+            console.info("0" && "NOL") // NOL (String)
+            console.info(null && "NULL") //null (null)
+            console.info(undefined && "UNDEFINED") //undefined (undefined)
+            console.info("undefined" && "defined") //defined
+
+
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Function rest parameter</title>
+    </head>
+    <body>
+        <script>
+            // Rest parameter adalah fitur dimana kita bisa mengirim data sebanyak-banyaknya pada satu parameter, dan secara otomatis akan di konversi menjadi array
+            // Syarat membuat rest parameter
+            // Rest parameter hanya boleh ada satu di function
+            // Rest parameter hanya boleh berada pada posisi paling terakhir. kecuali memang cuma ada 1 parameter
+            // Di bahasa pemrogramman lain ini disebut Variable Argument
+
+            function sum(name, ...data){
+                let total = 0
+                for(const item of data) {
+                    // console.info(item);
+                    total += item;
+                }
+                console.info(`Total ${name} is ${total}`)
+            }
+            
+            sum('Orange', 2, 3, 4, 5, 1);
+            sum('Apple', 6, 5, 3, 2, 1);
+
+            //spread syntax
+            //contoh
+            const arr = [10,20,20];
+            sum('Banana', arr); // Harusnya 50 tapi tidak sesuai
+            
+            //Menggunakan spread syntax
+            sum('Banana', ...arr)
+
+
+            // Sebelum ada rest parameter di js ada fitur bernama arguments object, ini adalah fitur dimana kita bisa mengambil semua parameter dalam bentuk array menggunakan object bermanama arguments
+            // Namun saat ini lebih disarankan menggunakan rest parameter
+
+            function oldSum(){
+                let total = 0
+                for(const item of arguments){
+                    total += item;
+                }
+                console.info(`Total is ${total}`);
+            }
+            oldSum(7,7,6);
+        </script>
+    </body>
+</html>

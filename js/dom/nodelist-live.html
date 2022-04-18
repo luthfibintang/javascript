@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Node Method</title>
+    </head>
+    <body>
+        <ul id="menu1">
+            <li id="first">First</li>
+            <li id="second">Second</li>
+            <li id="third">Third</li>
+        </ul>
+        <ul id="menu2">
+            <li id="satu">satu</li>
+            <li id="dua">dua</li>
+            <li id="tiga">tiga</li>
+        </ul>
+        <script>
+            const menu1 = document.getElementById("menu1");
+            const list = menu1.childNodes; // Nodelist bersifat live, walaupun variablenya sudah diambil sebelum ditambahkan element baru, ketika di tambahkan, secara otomatis akan bertambah
+            
+            menu1.appendChild(document.createElement("li"));
+            menu1.appendChild(document.createElement("li"));
+            
+            console.log(list);
+        </script>
+    </body>
+</html>

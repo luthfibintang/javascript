@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Object</title>
+    </head>
+    <body>
+        <script>
+            {
+                // Freeze & Seal
+                // Secara default object bisa diubah atau di hapus propertiesnya
+                // Jika tidak ingin membuat sebuah object tidak dapat diubah dan dihapus, kita bisa menggunakan beberapa static method\
+                // Object.freeze() = Membuat object tidak dapat diubah dan dihapus
+                // Object.seal() = Membuat object tidak dapat dihapus saja
+
+                // Freeze
+                const person = {
+                    firstName: 'ichsan',
+                    lastName: 'Ilyasa'
+                };
+
+                Object.freeze(person);
+
+                person.firstName = "Azisya"; // Tidak Berubah
+                delete person.lastName; // Tidak terhapus
+
+                console.info(person);
+
+                // Seal
+                const object = {
+                    prop1: 'Property 1',
+                    prop2: 'Property 2'
+                }
+
+                Object.seal(object);
+
+                delete object.prop2; // Tidak terhapus
+                object.prop1 = "Berubah" // Berubah
+
+                console.log(object);
+
+                // untuk mengecek sebuah object seal/freeze atau tidak menggunakan Object.isSealed()
+
+                console.log(Object.isSealed(object)); // True
+                console.log(Object.isSealed(person)) // true
+            }
+            {
+                // Object Assign
+                // Untuk menggabungkan Object
+
+                const target = {
+                    firstName: "Azisya",
+                    middleName: "Random"
+                }
+
+                const source = {
+                    middleName: "Luthfi", // source akan meniban semua yang ada di target jika mempunyai nama property yang sama
+                    lastName: "Bintang"
+                }
+
+                Object.assign(target, source);
+                console.info(target);
+            }
+            {
+                // Object Property Name & Value
+                
+                
+                const obj = {
+                    a: "something",
+                    b: "thing",
+                    c: "idk"
+                }
+                
+                // Object.values() => Untuk mengambil semua values dari object dan merubah menjadi array
+                const values = Object.values(obj);
+                console.log(values[0]); // Something
+
+                // Object.getOwnPropertyNames() => Untuk mengambil semua nama property dari object dan merubah menjadi array
+                console.log(Object.getOwnPropertyNames(obj));
+            }
+        </script>
+    </body>
+</html>

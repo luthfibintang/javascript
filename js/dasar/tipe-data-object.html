@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Tipe data boolean</title>
+    </head>
+    <body>
+        <script>
+            const identitas = {};
+            // Menambah atau mengubah
+            identitas["nama"] = "Azisya Luthfi Bintang"
+            identitas["umur"] = 17
+            identitas["gender"] = "Pria"
+
+            console.table(identitas)
+
+            identitas.ada = "Menambah object"
+            console.log(identitas.ada)
+
+            console.table(identitas)
+
+            delete identitas.ada;
+
+            //menghapus
+            delete identitas["umur"]
+            console.table(identitas);
+
+            // Menambah objek langsung saat membuat variable
+            const person = {
+                "nama lengkap" : "Ichsan Ilyasa",
+                umur : 17,
+                gender : "Pria"
+            }
+            console.table(person)
+            console.info(`Nama : ${person["nama lengkap"]}`)
+            console.info(`Umur : ${person.umur}`)
+
+
+            
+        </script>
+    </body>
+</html>

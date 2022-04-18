@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Ajax Status</title>
+    </head>
+    <body>
+        <h1 id="response"></h1>
+        <script>
+        
+        function displayResponse(json){
+            const header = document.getElementById("response")
+            header.textContent = json.response;
+        }
+            
+        const ajax = new XMLHttpRequest();
+        // State di ajax
+        ajax.onreadystatechange = function() {
+            console.info(`Ready State Change ${ajax.readyState}`);
+        }
+
+        // Open Ajax
+        ajax.open("GET", "api/hello.json");
+        // Load Ajax
+        ajax.addEventListener("load", function(){
+            const json = JSON.parse(ajax.responseText);
+
+            if(ajax.status === 200){
+                displayResponse(json);
+            } else {
+                displayResponse({
+                    response: `Terjadi Kesalahan dengan status ${ajax.status}`
+                })
+            }
+        })
+        ajax.send(); 
+          
+        </script>
+    </body>
+</html>

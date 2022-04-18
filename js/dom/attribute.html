@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Node List Static</title>
+    </head>
+    <body>
+        <img src="https://www.programmerzamannow.com/img/pzn.png" alt="PZN Logo" id="logo">
+        <script>
+            const logo = document.getElementById("logo")
+            const src = logo.getAttributeNode("src")
+
+            console.log(src.value)
+
+            // Jika langsung mengambil value
+            const alt = logo.getAttribute("alt")
+            console.log(alt)
+        </script>
+    </body>
+</html>

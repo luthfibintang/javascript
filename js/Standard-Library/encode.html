@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Encode</title>
+    </head>
+    <body>
+        <script>
+            // Encode URI
+            const url = 'http://www.contoh.com/?name=Azisya Luthfi Bintang';
+            console.log(url);
+
+            const encoded = encodeURI(url);
+            console.info(encoded);
+
+            const decoded = decodeURI(url);
+            console.info(decoded);
+
+            //Encode URI Component
+            const value = "eko&kurniawan=Khanedy"
+            const link = "http://www.contoh.com/?name="
+
+            const encode = encodeURIComponent(value);
+            console.log(link + encode);
+
+            const decode = decodeURIComponent(encode);
+            console.log(link + decode);
+        </script>
+    </body>
+</html>

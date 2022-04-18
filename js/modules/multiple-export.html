@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Multiple Import</title>
+    </head>
+    <body>
+        <script type="module">
+            import {name, sum, Person} from "./scripts/multiple.js";
+
+            console.log(name); // Azisya Luthfi Bintang
+
+            console.log(sum(12,2)); // 3
+
+
+            const person = new Person();
+            person.sayHello("Bintang");
+        </script>
+        
+    </body>
+</html>

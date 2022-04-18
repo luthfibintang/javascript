@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Function</title>
+    </head>
+    <body>
+        <script>
+            // Di js tidak ada batasan dimana kita bisa membuat function
+            // Function di dalam function disebut inner function
+            // Inner function hanya bisa di akses di tempat kita membuat function nya, tidak bisa di akses dari luar functionnya
+
+            function outer() {
+                function inner(){
+                    console.info("Inner")
+                }
+
+                inner();
+                inner();
+            }
+
+            outer();
+            inner(); // ERROR can not access inner function
+        </script>
+    </body>
+</html>

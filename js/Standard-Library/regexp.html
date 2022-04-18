@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>RegExp</title>
+    </head>
+    <body>
+        <script>
+            // Cara Membuat Regular Expression
+            // const reg1 = /Bintang/
+            // const reg2 = new RegExp("Bintang");
+            // const reg3 = new RegExp(/Bintang/);
+
+            const name = "Azisya\nLuthfi\nBintang\nIchsan\nluthfi\nbintong"
+            const regex = /Bintang/;
+
+            let result = regex.exec(name);
+            console.info(result);
+
+            let has = regex.test(name);
+            console.info(has);
+
+            // Regex Modifier
+            
+            const regex1 = /^Bint.ng/igm
+            const regex2 = /Luthfi/ig
+            
+            let src;
+            while((src = regex1.exec(name)) !== null) {
+                console.info(src);
+            }
+
+            while((src = regex2.exec(name)) !== null){
+                console.info(src)
+            }
+        
+        {
+            // Fitur regex Grouping
+            const regex = /ek[aiueo]/ig;
+            const text = "eko ado eki eka ejo emi elo eke"
+            
+            let result;
+            while((result = regex.exec(text)) !== null){
+                console.info(result);
+            }
+        }
+
+        {
+            // regular Expression di String
+            const string = "eko ado eki eka ejo emi elo eke"
+            console.info(string.match(/ek[aiueo]/ig)) // ["eko", "eki", "eka", "Eke"];
+            console.info(string.search(/ek[aiueo]/ig)) // 0
+
+            console.info(string.replace(/ek[aiueo]/i, "Keren")) // Keren ado Keren Keren ejo emi elo Keren
+            console.info(string.replaceAll(/ek[aiueo]/ig, "Keren")) // Keren ado Keren Keren ejo emi elo Keren
+            console.log(string.split(/e/ig)); // ['', 'ko ado ', 'ki ', 'ka ', 'jo ', 'mi ', 'lo ', 'k', '']
+        }
+
+        </script>
+    </body>
+</html>

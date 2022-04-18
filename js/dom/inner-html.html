@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Inner HTML</title>
+    </head>
+    <body>
+        <div id="content">
+        </div>
+
+        <script>
+            const cont = document.getElementById("content");
+            // cont.textContent = "<b>Azisya</b> Luthfi <i>Bintang</i>"
+            // cont.innerText = "<b>Azisya</b> Luthfi <i>Bintang</i>" // Inner text tidak mengubah tag html pada string
+            cont.innerHTML = "<b>Azisya</b> Luthfi <i>Bintang</i>" // Inner html akan mengubah tag html pada string menjadi html
+            console.info(cont.innerHTML);
+        </script>
+    </body>
+</html>

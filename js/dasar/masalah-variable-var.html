@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Arrow Function</title>
+    </head>
+    <body>
+        <script>
+            // Kenapa var tidak direkomendasikan di js lagi?
+            // alasan tidak di  rekomendasikan lagi adalah karena var tidak memiliki block scope, artinya var tidak bisa mengikat ke local scope (materi ada di file scope)
+
+            // Perbedaan let dengan var
+
+            // let
+            //global
+            let i = 20
+
+            for(let i = 1; i <= 5; i++){
+                // local
+                console.log(`Local : ${i}`)
+            }
+
+            // yang diharapkan nilai 20
+            console.info(`Global : ${i}`) // 20 (sesuai harapan)
+
+            // Var
+            // Global
+            var j = 20
+
+            for(var j = 1; j <= 5; j++){
+                // Local
+                console.log(`Local : ${j}`)
+            }
+
+            // yang diharapkan nilai 20
+            console.info(`Global : ${j}`) // 6 (Tidak sesuai harapan karna mengoveride yang di global, karna scope tidak berlaku)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Event Target</title>
+    </head>
+    <body>
+        <input type="button" value="blue">
+        <input type="button" value="red">
+        <input type="button" value="yellow">
+        <div id="canvas" style="width: 500px; height:500px; background-color: black; margin-top:10px"></div>
+        <script>
+            const canvas = document.getElementById("canvas");
+            const buttons = document.querySelectorAll("input");
+
+            for(const button of buttons){
+                button.onmouseenter = function() {
+                    canvas.style.backgroundColor = button.getAttribute("value")
+                }
+                button.onmouseleave = function() {
+                    canvas.style.backgroundColor = "black"
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML From </title>
+    </head>
+    <body>
+    <form name="commentForm">
+        <label for="comment">
+            comment : <input type="text" id="comment" name="comment">
+        </label>
+        <br>
+        <label for="from">
+            From : <input type="text" id="from" name="from">
+        </label>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+
+    <div id="commentList">
+
+    </div>
+        
+        <script>
+            document.querySelector("form[name=commentForm]").onsubmit = function(event){
+                event.preventDefault();
+
+                const commentList = document.getElementById("commentList");
+                const comment = document.forms['commentForm']['comment'].value;
+                const from = document.forms['commentForm']['from'].value;
+
+                const commentItem = document.createElement("p");
+                commentItem.textContent = `${comment} - ${from}`
+                commentList.appendChild(commentItem);
+
+                // Reset Supaya form kosong setelah di submit
+
+                // document.querySelector("form[name=commentForm]").reset();
+
+                // Cara yang lebih mudah
+                document.forms["commentForm"].reset();
+                
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Class Super Method</title>
+    </head>
+    <body>
+        <script>
+            //Public class fields
+            class Customer {
+                firstName;
+                lastName;
+                balance = 0
+
+                constructor(firstName, lastName){
+                    this.firstName = firstName;
+                    this.lastName = lastName;
+                }
+
+            }
+
+            const bintang = new Customer("Luthfi", "Bintnag");
+            console.info(bintang)
+
+            // Private class field (tidak bisa di access dari luar class)
+
+            class Counter {
+                #counter = 0
+
+                increment(){
+                    this.#counter++;
+                }
+
+                decrement() {
+                    this.#counter--;
+                }
+
+                get() {
+                    return this.#counter;
+                }
+            }
+
+            const counter = new Counter();
+
+            counter.counter = 100; // Akan secara otomatis menambah object baru di class
+            // counter.#counter = 100; // Akan error karna bersifat private
+
+            counter.increment(); // 1
+            counter.increment(); // 2
+            counter.increment(); // 3
+            counter.increment(); // 4
+            counter.increment(); // 5
+            counter.decrement(); // 4
+
+            console.info(counter.get()); // 4
+
+            console.log(counter);
+        </script>
+    </body>
+</html>

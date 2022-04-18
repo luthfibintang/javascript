@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Class Super Method</title>
+    </head>
+    <body>
+        <script>
+           class Shape {
+               paint(){
+                   console.info("Paint Shape")
+               }
+           }
+
+           class Circle extends Shape {
+               paint() {
+                   super.paint();
+                   console.info("Paint Circles")
+               }
+           }
+
+           const cek = new Circle();
+           cek.paint();
+        </script>
+    </body>
+</html>

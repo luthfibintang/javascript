@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Tipe data boolean</title>
+    </head>
+    <body>
+        <script>
+            let arraykosong = []
+            let arrayNama = ["Azisya", "Luthfi", "Bintang"];
+            arraykosong.push("Sudah", "Tidak", "Kosong")
+
+            
+            document.writeln(arrayNama[2]);
+            document.writeln(arrayNama.length);
+            // console.writeln(arrayNama[0]); // Akan Error
+            console.table(arrayNama) // Tidak error
+
+
+            console.info(arraykosong[0]);
+            arraykosong[0] = "Belum"
+            console.info(arraykosong[0])
+            console.table(arraykosong)
+            
+            delete arraykosong[0];
+            console.table(arraykosong)
+            console.info(arraykosong.length) //length tetap, tidak merubah atau menggeser array
+
+            arraykosong.push("terakhir") // tetap akan menambah di paling akhir
+
+            arraykosong[0] = "budi" // array 0 masih bisa di pakai
+            console.table(arraykosong)
+
+            // Array tidak terbatas tipe data, bisa tipe data apapun
+            arraykosong.push(1,2,3, true);
+            console.table(arraykosong)
+
+            //Masukan Array kedalam Array
+            arraykosong.push(["array", "dalam", "array"])
+            console.table(arraykosong);
+        </script>
+    </body>
+</html>

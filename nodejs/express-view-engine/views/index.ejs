@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Hello World</h1>
+  <h2>Hello <%= name %></h2>
+    <br>
+  <h4>Daftar Contact</h4>
+  <% if (contact.length < 1) { %>
+    <h6>Tidak ada contact yang tersimpan</h6>
+  <% } %>
+  <% contact.forEach(c => { %>
+    <ul>
+      <li><%= c.name %> </li>
+      <li><%= c.email %> </li>
+      <li><%= c.noHP %> </li>
+    </ul>
+  <% }) %>
+</div>
+

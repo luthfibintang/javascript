@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>JSON</title>
+    </head>
+    <body>
+        <script>
+            // BigInt merupakan tipe data number yang bisa mencakup data angka lebih dari Number.MAX_SAFE_INTEGER
+            // Untuk kasus number yang seperti itu lebih baik menggunakan tipe data BigInt
+
+            const a = BigInt(Number.MAX_SAFE_INTEGER);
+            const b = BigInt(Number.MAX_SAFE_INTEGER);
+
+            const c = a + b
+
+            console.info(c)
+            console.info(typeof c);
+        </script>
+    </body>
+</html>

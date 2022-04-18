@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Class Method</title>
+    </head>
+    <body>
+        <script>
+            // Untuk method pada class sebaiknya ditambahkan langsung ke prototypenya jangan jadi object
+
+            class Person {
+                constructor (value) {
+                    // Method tidak di rekomendasikan di constructor atau di objecnya
+                    this.name = value
+                    this.age = 17
+                }
+                
+                sayHello(name) {
+                    console.info(`Hello ${this.name}, nama saya ${name}, umur saya ${this.age} `)
+                }
+            }
+
+            const bintang = new Person("Ichsan");
+            bintang.sayHello("Bintang");
+            console.log(bintang);
+        </script>
+    </body>
+</html>

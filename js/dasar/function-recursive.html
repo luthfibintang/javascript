@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Recursive</title>
+    </head>
+    <body>
+        <script>
+            // Tanpa menggunakan konsep recursive
+            function factorial(value) {
+                let result = 1;
+                for(let i = 1; i <= value; i++){
+                    result *= i;
+                }
+                return result
+            }
+
+            console.info(factorial(5));
+            // console.info(1*2*3*4*5);
+
+            // Menggunakan factorial recursive
+
+            function factorialRecursive(value){
+                if(value === 1) {
+                    return 1;
+                } else {
+                    return value * factorialRecursive(value - 1);
+                }
+            }
+
+            console.info(factorialRecursive(5));
+
+            // Cara kerja
+            // 5 * factorialRecursive(4)
+            // 5 * 4 * factorialRecursive(3)
+            // 5 * 4 * 3 * factorialRecursive(2)
+            // 5 * 4 * 3 * 2 * factorialRecursive(1)
+            // 5 * 4 * 3 * 2 * 1
+
+            // Contoh Mudahnya 
+            function cetak(value){
+                if (value ===  0){
+                    return;
+                } else {
+                    console.log(value);
+                    cetak(value - 1);
+                }
+            }
+
+            function angka(n){
+                if (n === 1){
+                    console.log(1)
+                    return;
+                } else {
+                    console.log(n)
+                    angka(n - 1);
+                }
+            }
+            
+            cetak(10);
+            angka(3);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Function Generator</title>
+    </head>
+    <body>
+        <script>
+            // Function generator sederhana
+            function* createNames(){
+                yield "Azisya";
+                yield "Luthfi";
+                yield "Bintang";
+            }
+
+            const names = createNames();
+            for(const name of names){
+                console.log(name)
+            };
+
+            // Function generator yang lebih kompleks
+
+            function* buatGanjil(value) {
+                for (let i = 1; i <= value; i++){
+                    if (i % 2 == 1){
+                        yield i;
+                    }
+                }
+            }
+
+            const ganjil = buatGanjil(10)
+            for(const angka of ganjil){
+                console.info(angka);
+            }
+
+            // Data generator bersifat lazy
+
+            function* buatGenap(n){
+                for(let i = 1; i <= n; i++){
+                    if(i % 2 === 0){
+                        console.info(`Yield ${i}`)
+                        yield i;
+                    }
+                }
+            }
+
+            const genap = buatGenap(10);
+            for(const angka of genap){
+                console.info(angka)
+            }
+
+            // eager
+            function buatGenapArray(n){
+                const result = [];
+                for(let i = 1; i <= n; i++){
+                    if(i % 2 === 0){
+                        console.info(`Yield ${i}`)
+                        result.push(i);
+                    }
+                }
+                return result;
+            }
+
+            // const eager = buatGenapArray(10);
+            // for(const angka of eager){
+            //     console.info(angka)
+            // }
+
+            const numbers = buatGenap(100);
+            console.info(numbers.next().value)
+            console.info(numbers.next().value)
+        </script>
+    </body>
+</html>

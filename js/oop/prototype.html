@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Param di constructure function</title>
+    </head>
+    <body>
+        <script>
+            function Person(firstName, lastName){
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+
+            Person.prototype.sayBye = function() {
+                console.info(`Good Bye ${this.lastName}`)
+            } // Ini akan menambah ke dalam prototype bukan ke object
+
+            const bintang = new Person("Azisya", "Bintang");
+            bintang.sayBye();
+
+            const ichsan = new Person("Ichsan", "Ilyasa");
+
+            console.log(bintang)
+            console.info(ichsan)
+        </script>
+    </body>
+</html>

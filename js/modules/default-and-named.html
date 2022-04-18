@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Default Class</title>
+    </head>
+    <body>
+        <script type="module">
+            // import authorName, {content, title as judul} from "./scripts/default-and-named.js"
+            import {default as authorName, content, title as judul} from "./scripts/default-and-named.js"
+
+            console.log(judul);
+            console.log(content);
+            console.log(`By. ${authorName}`);
+
+            // Rekomendasi
+            // Bedakan antara default dan named, karena jika digabungkan kadang akan membingungkan ketika melakukan import
+            // Sebisa mungkin selalu gunakan export named dibandingkan export default
+        </script>
+    </body>
+</html>

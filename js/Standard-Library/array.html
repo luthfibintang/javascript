@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>Object</title>
+    </head>
+    <body>
+        <script>
+        {
+           // Array Loop
+           const array = ["Azisya", "Luthfi", "Bintang"];
+
+           array.forEach(function (value, index){
+               console.info(`${index} : ${value}`)
+           })
+
+           // menggunakan arrow function
+           array.forEach((value, index) => console.info(`${index} : ${value}`));
+
+           array.forEach(value => console.log(value)); // Untuk hanya menampilkan value 
+        }
+        {
+            // Array Queue [first in first out]
+            const queue = [];
+            queue.push("Ichsan")
+            queue.push("Ilyasa")
+            queue.push("Junadi")
+
+            console.info(queue)
+            console.info(queue.shift()); // mengambil paling depan dan menghapus (Ichsan)
+            console.info(queue)
+            console.info(queue.shift());
+            console.info(queue.shift());
+            console.info(queue.shift()); // Undefined karena sudah tidak ada data lagi
+        }
+        {
+            // Array Stack [last in first out] // kebalikan dari Queue
+            const stack = [];
+            stack.push("Azisya", "Luthfi", "Bintang");
+
+            console.info(stack);
+            console.info(stack.pop()); // Mengambil yang paling belakang dan menghapus (Bintang)
+            console.info(stack)
+            console.info(stack.pop())
+            console.info(stack.pop())
+            console.info(stack.pop()) //undefined karena sudah tidak ada data lagi
+        }
+        {
+            // Array Concat (Untuk Menggabungkan array)
+            const firstName = ["Azisya"];
+            const middleName = ["Luthfi"]
+            const lastName = ["Bintang"]
+        
+            const name = firstName.concat(middleName, lastName);
+            
+            console.log(name);
+            console.log(name.length);
+        }
+        {
+            // Array Search
+            const source = [1,2,3,4,5,1,2,3,4,5];
+
+            console.info(source.find(value => value > 3)); // 4
+            console.info(source.findIndex(value => value > 3)) // 3
+            console.info(source.includes(7)) // false
+            console.info(source.indexOf(5)) // 4
+            console.info(source.lastIndexOf(1)) // 5
+            console.info(source.lastIndexOf(4)) // 8
+        }
+        {
+            // Array Filter
+            // Saat melakukan filter akan menciptakan array baru, jadi yang lama tidak berubah
+
+            const number = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+
+            const ganjil = number.filter(num => num % 2 == 1) // Ganjil
+            const genap = number.filter(num => num % 2 == 0) // Genap
+
+            console.log(number);
+            console.log(ganjil);
+            console.log(genap);
+        }
+        {
+            // Array transform
+
+            // map
+            const number = [1,4,9,16];
+            console.log(number.map(value => value * 2));
+            
+            const name = "Azisya Luthfi Bintang".split(" ");
+            console.log(name.map(value => value.toUpperCase()));
+
+            const namesReduce = name.reduce((before, value) => before + " " + value);
+            console.log(namesReduce);
+
+            const nameRight = name.reduceRight((before, value) => before + " " + value); // Reduce Right Dimulai dari yang kanan
+            console.log(nameRight);
+
+            console.log(number.reduce((before, value) => before + value)); // 30
+            
+        }
+        </script>
+    </body>
+</html>

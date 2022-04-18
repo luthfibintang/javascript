@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Arrow Function</title>
+    </head>
+    <body>
+        <script>
+            function createAdder(value) {
+                const owner = "Bintang"
+
+                function add(param){
+                    console.info(owner);
+                    return value + param;
+                }
+
+                return add;
+            }
+
+            const addTwo = createAdder(2);
+
+            console.info(addTwo(2))
+
+            // Seakan Membuat ini
+            // function addTwo(param){
+            //     console.info("Bintang")
+            //     return 2 + param
+            // }
+
+            function tampilNama(firstName){
+                let middleName = "Luthfi"
+
+                function add(lastName){
+                    console.log(`Hello ${firstName} ${middleName} ${lastName}`);
+                }
+
+                return add;
+            }
+
+            let name = tampilNama("Azisya")
+
+            name("Bintang")
+
+            function salam(waktu){
+                function cek(nama){
+                    console.log(`Hallo ${nama}, Selamat ${waktu}`);
+                }
+                return cek;
+            }
+
+            let malam = salam("Malam");
+            let sore = salam("Sore");
+            let pagi = salam("Pagi");
+
+            sore("Bintang")
+
+            function cek(firstname, lastname){
+                let cek = `${firstname} ${lastname}`;
+                return cek;
+            }
+
+            console.log(cek("Azisya", "Luthfi"));
+
+            function counter(){
+                let count = 0
+                return function(){
+                   return ++count;
+                }
+            }
+
+            let counting = counter();
+            console.log(counting());
+            console.log(counting());
+            console.log(counting());
+        </script>
+    </body>
+</html>

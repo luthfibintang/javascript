@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Object</title>
+    </head>
+    <body>
+        <script>
+           let longString = "This is a very long string which needs \
+                            to wrap across multiple lines because \
+                            otherwise my code is unreadable."
+            
+            document.writeln(longString) // Cuma test
+
+            const test = "Name : "
+            const name = 'Azisya Luthfi Bintang';
+
+            console.info(name.length); // panjang kata
+            console.info(name.toLowerCase()); // semua huruf menjadi lowercase
+            console.info(name.toUpperCase()); // Semua huruf menjadi uppercase
+            console.info(name.split(" ")); // Menjadi Array
+            console.info(name.charAt(2)) // i
+
+            const input = "     input     ";
+            console.info(input.trim()) // Spasinya hilang
+            console.info(input); // tidak hilang
+
+            //concat
+            const str1 = 'Hello';
+            const str2 = 'World';
+
+            console.log(str1 + " " + str2); // Hello World
+            console.log(`${str1} ${str2}`) // Hello World
+            //Menggunakan concat
+            console.log(str1.concat(' ', str2)) // Hello World
+            console.log(str2.concat(', ', str1))
+
+        </script>
+    </body>
+</html>

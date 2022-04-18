@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Param di constructur function</title>
+    </head>
+    <body>
+        <script>
+            function Person(firstName, lastName){
+                this.firstName = firstName
+                this.lastName = lastName
+                this.greeting = function (time) {
+                    console.info(`Good ${time}, my name is ${this.lastName}`)
+                }
+            }
+
+            const bintang = new Person("Luthfi", "Bintang");
+            bintang.greeting("Morning")
+            
+            console.log(bintang);
+        </script>
+    </body>
+</html>

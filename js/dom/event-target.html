@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Event Target</title>
+    </head>
+    <body>
+        <input type="button" id="clickMe" value="Click Me">
+        <script>
+            const btnClick = document.getElementById("clickMe")
+
+            btnClick.addEventListener("click", function(){
+                alert("Heyo You Click me");
+            })
+            // Perbedaan target dan global adalah target bisa lebih memasukan event 2x yang sama onclick, sedangkan global tidak
+            btnClick.addEventListener("mouseenter", function(){
+                btnClick.setAttribute("value", "Click Me Now")
+            })
+
+            btnClick.addEventListener("mouseout", function(){
+                btnClick.setAttribute("value", "Click Me")
+            })
+
+        </script>
+    </body>
+</html>

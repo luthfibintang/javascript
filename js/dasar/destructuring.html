@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Destructuring</title>
+    </head>
+    <body>
+        <script>
+            // Mengakses data pada array secara manual
+            const names = ["Azisya", "Luthfi", "Bintang"];
+            const firstname = names[0];
+            const middlename = names[1];
+            const lastname = names[2];
+
+            console.log(firstname);
+            console.log(middlename)
+            console.log(lastname)
+
+            // menggunakan Destructuring
+            const fullNames = ["hafida", "Laila", "Fifi", "lebih", "adaadsa"];
+            const [fName, mName, lName, ...others] = fullNames;
+
+            console.info(fName);
+            console.info(mName);
+            console.info(lName);
+            console.info(others);
+            console.info(others[0])
+
+            //Destructuring di object
+            const person = {
+                fullname: "Azisya Luthfi Bintang",
+                age: "17 Tahun",
+                address: {
+                    street: "Jl Pendidikan",
+                    city: "Tangerang",
+                    country: "Atlantis"
+                },
+                hobby: "Games"
+            }
+
+            const {fullname, age, address: {country, city, street}, hobby} = person // harus sama dengan nama property // Bisa mengambil address di dalamnya
+            // const {street, city, country} = person.address // Bisa juga seperti ini 
+            console.info(fullname)
+            console.info(street)
+
+            // Destructuring di function parameter
+            // Object
+        {
+            function displayPerson({firstName, middleName, lastName}){ // langsung di ekstrak di dalam function
+                console.info(firstName)
+                console.info(middleName)
+                console.info(lastName)
+            }
+            const ppl = {
+                firstName: "Azisya",
+                middleName: "Luthfi",
+                lastName: "Bintang"
+            }
+            displayPerson(ppl)
+        }
+
+            //array
+        {
+            function plus([first, second]){
+                console.info(first + second);
+            }
+
+            const value = [191, 23];
+            plus(value)
+        }
+
+        // default Value
+        // Jika property, index, atau datanya tidak ada maka akan menambahkan default value
+        {
+            const names = ["Azisya", "luthfi"];
+            const [fname, mname = "midname", lname = "Bintang"] = names // Default untuk object kurang lebih sama
+
+            console.info(fname) // Azisya
+            console.info(mname) // Luthfi
+            console.info(lname) // Bintang
+
+            names[1] = undefined
+            const [firstname, middlename = "midname", lastname = "Bintang"] = names
+            console.info(middlename)
+        }
+
+        // Menggunakan Nama Variable 
+        // Namun di object, nama variable harus sama dengan nama property
+        // Namun sebenarnya juga bisa menggunakan nama variable lain
+        // Contoh
+
+        {
+            const names = {
+                firstName: "Ichsan",
+                lastName: "ilyasa"
+            }
+            // Caranya seperti ini
+            const {
+                firstName: namaPertama,
+                lastName: namaTerakhir = "Brown"
+            } = names
+
+            console.info(namaPertama);
+            console.info(namaTerakhir);
+        }
+
+        </script>
+    </body>
+</html>

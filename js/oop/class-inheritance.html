@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Class Method</title>
+    </head>
+    <body>
+        <script>
+            class Employee {
+                sayHello(name) {
+                    console.info(`Hello ${this.name} nama saya ${name}, saya adalah employee`)
+                }
+            }
+
+            class Manager extends Employee{
+                sayHello(name) {
+                    console.info(`Hello ${this.name} nama saya ${name}, saya adalah Manager`)
+                }
+            }
+
+            const ichsan = new Employee();
+            ichsan.name = "Bintang"
+            ichsan.sayHello("Ichsan")
+
+            const bintang = new Manager();
+            bintang.name = "Ichsan"
+            bintang.sayHello("Bintang")
+
+            console.log(ichsan);
+            console.log(bintang);
+        </script>
+    </body>
+</html>

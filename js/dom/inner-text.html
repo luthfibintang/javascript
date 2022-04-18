@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Event Target</title>
+    </head>
+    <body>
+        <div id="content">
+            <script>
+                console.info("Hello World");
+            </script>
+            <b>Azisya</b> Luthfi <i>Bintang</i>
+        </div>
+
+        <script>
+            const cont = document.getElementById("content");
+
+            console.info(cont.textContent);
+            console.info(cont.innerHTML);
+            console.info(cont.innerText);
+
+        </script>
+    </body>
+</html>

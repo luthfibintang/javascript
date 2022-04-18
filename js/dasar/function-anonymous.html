@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Function rest parameter</title>
+    </head>
+    <body>
+        <script>
+            // anonymous function tidak perlu nama (digunakan jika ingin membuat parameter simple)
+           let say = function (name) {
+               console.info(`hello ${name}`)
+           };
+
+           say("Bintang");
+
+           // Anonymous Function di Parameter
+
+           // Cara normal (kemarin)
+           function name(callback){
+               callback("fifi");
+           }
+           name(say);
+
+           name(function(name){
+               console.info(`Hi ${name}`)
+           })
+
+        </script>
+    </body>
+</html>

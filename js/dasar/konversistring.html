@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Tipe data boolean</title>
+    </head>
+    <body>
+        <script>
+            let num1 = 1;
+            let num2 = "2";
+            let result = num1 + num2;
+            document.writeln(result)
+
+            //konversi string to number
+            let no1 = 1;
+            let no2 = parseInt('2');
+            console.info(no1 + no2);
+
+            //number to string
+            no1 = 1
+            no2 = 2
+            const totalnumber = no1 + no2; // 3
+            const totalstring = no1.toString() + no2.toString(); // 12
+            document.writeln(`<p> ${totalnumber} </p>`);
+            document.writeln(`<p>${totalstring}</p>`);
+
+            //NaN (Not a Number)
+            document.writeln(`<p> ${parseInt("salah")} </p>`); // NaN
+            //NaN menggunakan parse tetap akan mentolenir kesalahan angka yang didepan
+            document.writeln(`<p> ${parseFloat("1.1 test 12")} </p>`); //1.1
+
+            //Number() tidak mentolenir kesalahan
+            document.writeln(`<p> ${Number("1.1 test")} </p>`); // NaN
+            document.writeln(`<p> ${Number("1.1")} </p>`); // 1.1
+
+            const first = Number("Salah")
+            const second = 2
+            const total = first + second //NaN
+            document.writeln(`<p> ${total} </p>`);
+            
+            document.writeln(`<p> ${isNaN(second)} </p>`); // false
+            document.writeln(`<p> ${isNaN(total)} </p>`); // true
+        </script>
+    </body>
+</html>

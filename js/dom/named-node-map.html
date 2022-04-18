@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Node List Static</title>
+    </head>
+    <body>
+        <img alt="PZN Logo" src="https://www.programmerzamannow.com/img/pzn.png" id="logo">
+        <script>
+            const logo = document.getElementById("logo");
+            const attr = logo.attributes;
+
+            console.log(attr.getNamedItem("src"))
+
+            console.log(attr);
+            for (const attribute of attr){
+                console.info(`${attribute.name} : ${attribute.value}`)
+            }
+        </script>
+    </body>
+</html>

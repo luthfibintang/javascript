@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Hello World</title>
+    </head>
+    <body>
+        <!-- 1
+        <script src="scripts/hello-world.js"></script>
+        3
+        <script src="scripts/hello-world.js"></script> -->
+
+        <script>
+
+            /* Operator aritmatika */
+            let result = 1 + 2; // 3
+            document.writeln("<p> 1 + 2 = " + result + "</p>");
+
+            result = result - 2 // 1
+            document.writeln("<p> 3 - 2 = " + result + "</p>");
+            let originalresult = result;
+
+            result = originalresult * 3; // 3
+            document.writeln(originalresult + " x 3 = " + result + "<br>");
+
+            /* Operator Augmented Assignment*/
+            document.writeln("<h3> Operator Augment Assignment </h3>");
+            result = 10 * 2; // Menggunakan aritmatika biasa yang hasilnya 20
+            document.writeln(result + "<br>");
+            result -= 5; // Ditambah operator augmented supaya lebih singkat jadi (20 - 5)
+            document.writeln(result + "<br>");
+            // result /= 3; //Hasilnya adalah 5
+            document.writeln(result=3);
+
+            /* Operator Unary */
+            document.writeln("<h3> Operator Unary </h3>");
+            let unary = 1;
+            document.writeln("<p>" + unary + "</p>")
+            
+            unary++; // 2
+            document.writeln(unary + "<br>");
+
+            unary--; // 1
+            document.writeln(unary + "<br>");
+
+            unary = -unary;
+            document.writeln(unary);
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Arrow Function</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                firstName: "first",
+                middleName: "Middle",
+                lastName: "last",
+                // GETTER
+                get fullname(){
+                    return `${this.firstName} ${this.middleName} ${this.lastName}`
+                },
+                
+                //SETTER
+                set fullname(value){
+                    const array = value.split(" ");
+                    this.firstName = array[0]
+                    this.middleName = array[1]
+                },
+            }
+
+            console.info(person.fullname)
+
+            person.fullname = "Azisya Luthfi"
+            console.table(person);
+
+            person.fullname = "Ichsan Ilyasa"
+            console.table(person);
+
+            person.fullname = "Hafidah Laila"
+            console.table(person);
+
+            // Fitur getter dan setter masih jarang dipakai oleh programmer js
+        </script>
+    </body>
+</html>

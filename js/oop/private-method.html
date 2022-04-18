@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Private Method</title>
+    </head>
+    <body>
+        <script>
+            class Person {
+                say(name) {
+                    if(name) {
+                        this.#sayWithName(name)
+                    } else {
+                        this.#sayWithoutName(name)
+                    }
+                }
+
+                #sayWithoutName() {
+                    console.info("Hello")
+                }
+
+                #sayWithName(name) {
+                    console.info(`Hello ${name}`);
+                }
+            }      
+
+            const bintang = new Person();
+            
+            bintang.say("bintang"); // Bintang
+
+            //bintang.#sayWithname("Bintang") // SyntaxError : Private field must be declare in an enclosing class
+            
+        </script>
+    </body>
+</html>

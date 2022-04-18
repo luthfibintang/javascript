@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Class Method</title>
+    </head>
+    <body>
+        <script>
+            class Configuration {
+                cek = "menjadi Object" // jadi Object
+                static name = "Belajar JavaScript Dasar"; // Jika static tidak menjadi object
+                static version = 6.9;
+                static author = "Azisya Luthfi Bintang"
+            }
+
+            const config = new Configuration();
+            console.log(config)
+
+            // Access static field
+            console.info(Configuration.name);
+            console.info(Configuration.version);
+            console.info(Configuration.author);
+
+            Configuration.author = "Ichsan Ilyasa"; // Merubah value static
+            console.info(Configuration.author);
+
+            // Static Method
+
+            class MathUtil {
+                static sum(...numbers) {
+                    let total = 0
+                    for (const number of numbers) {
+                        total += number;
+                    }
+                    return total;
+                }
+            }
+
+            const sum = MathUtil.sum(1, 2, 3);
+            console.info(sum);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Module Object</title>
+    </head>
+    <body>
+        <script type="module">
+            import {Person, sayHello, sayGoodBye, multPerson, sum} from "./scripts/aggregate.js"
+
+            const person1 = new Person("Luthfi")
+            person1.sayHello("Ardhie")
+
+            sayHello("Ichsan");
+
+            sayGoodBye("Ichsan")
+
+            const person2 = new multPerson();
+            person2.sayHello("Firda");
+
+            console.info(sum(10,12))
+        </script>
+    </body>
+</html>

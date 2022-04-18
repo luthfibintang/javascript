@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Error handling</title>
+    </head>
+    <body>
+        <script>
+            // Throw Error
+            class MathUtil {
+                static sum(...numbers) {
+                    if (numbers.length === 0){
+                        throw new Error("Total parameter harus lebih dari 0")
+                    }
+
+                    let total = 0
+                    for (const number of numbers) {
+                        total += number;
+                    }
+                    return total;
+                }
+
+            }
+            
+            
+            const sum = MathUtil.sum(1, 2, 3);
+            console.log(sum)
+                        
+            // Error Handling (Jika error ini tidak akan memberhentikan kode dibawahnya try&catch)
+            try {
+                console.info(MathUtil.sum());
+                console.info("Kode Block Try akan berhenti")
+            } catch (error) {
+                console.error(`Terjadi Error : ${error.message}`)
+            } finally {
+                console.info("Program End") // mau error atau tidak tetap akan di eksekusi
+            }
+
+            console.info("Masih Lanjut")
+
+            console.log(MathUtil.sum());
+
+            console.log("tidak di lanjut") // Tidak muncul di console
+
+            </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Object</title>
+    </head>
+    <body>
+        <script>
+            // Membuat object biasa
+            const bintang = {
+                firstName: "",
+                lastName: "",
+                // greeting: function (time) {
+                //     console.info(`${time}, ${this.lastName}`);
+                // }
+            }
+
+            // Sebelum EcmaScript versi 6, pembuatan class biasanya menggunakan function, karna sebelumnya js bukanlah bahasa pemrogramman yang fokus ke oop
+            // Untuk membuat class sebelumnya bisa menggunakan function yang dinamakan Constructor Fucntion
+            // Cara pembuatannya sama seperti function bisaa, tapi biasanya menggunakan Capital diawal kata (untuk membedakan function biasa dan constructure function)
+
+            function PersonName(){
+                this.firstName = ""
+                this.lastName = ""
+                this.greeting = function (time) {
+                    console.info(`Good ${time}, my name is ${this.lastName}`)
+                }
+            }
+
+            const fifi = new PersonName();
+            fifi.firstName = "Fifi";
+            fifi.firstName = "Hafida"
+            fifi.lastName = "Laila"
+            fifi.greeting("afternoon");
+
+            const azisya = new PersonName();
+            azisya.firstName = "Luthfi"
+            azisya.lastName = "Bintang"
+            azisya.greeting("Night")
+
+
+            console.log(fifi)
+            console.info(azisya)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Ajax Send Form</title>
+    </head>
+    <body>
+        <h1>Register</h1>
+        <form>
+            <label for="username"> Username :
+                <input type="text" id="username" name="username">
+            </label>
+            <br>
+            <label for="password"> Name :
+                <input type="text" id="name" name="name">
+            </label>
+            <br>
+            <label for="profile"> Profile :
+                <input type="file" id="profile" name="profile">
+            </label>
+            <br>
+            <input type="button" id="register" value="register">
+        </form>
+        <h1 id="response"></h1>
+        <script>
+            function doRegister(){
+                const ajax = new XMLHttpRequest();
+                ajax.open("POST", "https://hookb.in/6JrxJqdkdeToRnwwY3J8");
+                ajax.onload = function() {
+                    const res = document.getElementById("response");
+                    res.textContent = `Response is ${ajax.responseText}`
+                }
+                
+                const form = new FormData();
+                form.append("username", document.getElementById("username").value);
+                form.append("name", document.getElementById("name").value);
+                
+                const files = document.getElementById("profile").files;
+                const firstFile = files.item(0);
+                
+                form.append("profile", firstFile);
+
+
+                ajax.send(form);
+            }
+
+            document.getElementById("register").onclick = doRegister;
+        </script>
+    </body>
+</html>

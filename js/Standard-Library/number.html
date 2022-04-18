@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Object</title>
+    </head>
+    <body>
+        <script>
+            const input = "123123"
+            const num = Number(input);
+
+            console.info(typeof(input)) // String
+            console.info(typeof(num)) // Number
+            console.info(num);
+
+            console.info(Number("Test")) // NaN
+
+            console.info(Number.MIN_VALUE);
+            console.info(Number.MAX_VALUE);
+            console.info(Number.MIN_SAFE_INTEGER);
+            console.info(Number.MAX_SAFE_INTEGER);
+            console.info(Number.NaN);
+
+            console.info(Number.isNaN("Ini String")) // false
+            console.info(Number.isInteger(1)) // True
+
+            console.info(Number.parseFloat("123")) // 123 (number)
+
+            const value = Number(123456);
+            console.info(value.toString(2)); // Binary
+            console.info(value.toLocaleString("id-ID"));
+
+            let d = new Date('December 17, 1995 03:24:00')
+            console.log(Number(d))
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Module Object</title>
+    </head>
+    <body>
+        <script type="module">
+            // Tanpa mengubah menjadi object
+            // import {firstName, middleName, lastName, hello, Person} from "./scripts/module-object.js"
+            // console.log(firstName);
+            // hello();
+
+            import * as obj from "./scripts/module-object.js"
+
+            console.info(obj.firstName)
+            console.info(obj.middleName)
+            console.info(obj.lastName)
+            
+            obj.hello()
+
+            const person = new obj.Person();
+            
+            person.sayHello("Ardhie")
+        </script>
+    </body>
+</html>

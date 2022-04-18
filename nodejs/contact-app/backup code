@@ -1,0 +1,12 @@
+// import {pertanyaan, saveContact} from './contacts.mjs'
+
+// const main = async () => {
+//     const name = await pertanyaan("Tuliskan Nama anda : ");
+//     const email = await pertanyaan("Tuliskan Email Anda : ");
+//     const noHP = await pertanyaan("Tuliskan Nomor HP anda : ")
+
+//     saveContact(name, email, noHP);
+
+// }
+
+// main();

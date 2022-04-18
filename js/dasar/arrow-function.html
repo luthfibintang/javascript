@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Arrow Function</title>
+    </head>
+    <body>
+        <script>
+            // Arrow function adalah alternattif pembuatan function yang lebih sederhana
+            // Namun terdapat keterbatasan dan tidak bisa di gunakan di segala situasi
+            // Kekurangan arrow function 
+                // - Tidak memiliki fitur arguments object
+                // - tidak bisa menggunakan function generator
+                // - tidak bisa mengakses this (function object)
+                // - tidak bisa di akses super (js oop) 
+
+            // Contoh arrow function sederhana
+            const sayHello = (name) => {
+                const say = `hello ${name}`;
+                console.log(say);
+            }
+
+            sayHello("Bintang")
+
+            // Arrow function tanpa block
+            const sayHi = (name) => console.info(`Hi ${name}`)
+
+            sayHi("FIFI")
+
+            // Arrow function return value
+            const sum = (first, second) => {
+                return first + second;
+            }
+            console.log(sum(5,5)) // 10
+
+
+            // Tanpa menggunakan block
+            const sum1 = (first, second) => first + second;
+            console.info(sum1(10,10))
+
+            // Arrow function tanpa kurung parameter
+            // ini dipakai jika parameter di arrow function hanya satu, kita bisa tidak menggunakan kurung pada parameter
+            
+            const hello = name => console.info(`hello ${name}`)
+
+            hello("ichsan")
+
+            // Arrow function sebagai parameter 
+            // karena arrow function sama seperti anonymous function
+            // jadi bisa emnggunakan arrow function sebagai parameter di function lain
+
+            function giveMeName(callback){
+                callback("Eko")
+            }
+
+            const name = (name) => console.info(`Hello ${name}`)
+            giveMeName(name); // bisa memanfaatkan variable
+            giveMeName((name) => console.info(`Hello ${name}`)) // Bisa langsung
+
+        </script>
+    </body>
+</html>

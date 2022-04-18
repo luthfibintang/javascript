@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Tipe data boolean</title>
+    </head>
+    <body>
+        <script>
+            const firstName = "Azisya";
+            const middleName = "Luthfi";
+            const lastName = "Bintang";
+
+            const biasa = ("<p>Name : " + firstName + " " + middleName + " " + lastName + "</p>") //cara manual
+            const template = (`<p>Name : ${firstName} ${middleName} ${lastName}</p>`) // cara templating
+
+            document.writeln(biasa)
+            document.writeln(template) // Menggunakan backtip lebih efektif dibandingkan menggunakan + untuk menggabungkan string karna tidak perlu tutup buka petik
+
+            // String template juga dapat menggunakan expression
+            const name = "Bintang"
+            const value = "70"
+            const siswa = `Name : ${name}, lulus : ${value > 75}`
+            console.info(siswa);
+
+            // MultilineString
+            let multiline = `
+            Nama : Azisya Luthfi Bintang 
+            Kelas : XII PRL`;
+            
+            console.info(multiline);
+        </script>
+    </body>
+</html>

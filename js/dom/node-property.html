@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Node</title>
+    </head>
+    <body>
+        <ul id="menu">
+            <li id="first">First</li>
+            <li id="second">Second</li>
+            <li id="thrid">Third</li>
+        </ul>
+        <script>
+            const menu = document.getElementById("menu")
+            console.info(menu);
+            console.info(menu.childNodes);
+
+            const tiga = document.getElementById("thrid");
+            console.info(tiga);
+            console.info(tiga.textContent);
+            console.info(tiga.previousSibling.previousSibling);
+        </script>
+    </body>
+</html>

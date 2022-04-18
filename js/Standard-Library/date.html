@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Date</title>
+    </head>
+    <body>
+        <script>
+            console.log(new Date()); // Membuat tanggal hari ini dengan lengkap
+
+            // Urutan : year, monthIndex, day, hours, minutes, seconds, milliseconds
+            console.log(new Date(2022, 3, 4)) // Membuat Tanggal lebih spesifik
+
+            console.log(new Date(2022, 3, 4, 2, 51, 51, 20)) // Membuat yang lebih spesifik dan lengkap
+
+            // Menggunakan epoch (Currentmillis) [Epoch & unix timestamp merupakan hitungan miliseccond setelah tanggal 1 januari 1970]
+            console.log(new Date(1649015650574)) 
+            
+        {
+            // Epoch & Unix Timestamp saat ini
+            const timestamp = Date.now()
+            console.log(timestamp);
+            console.log(new Date(timestamp));
+
+            // Untuk mendapatkan epoch timestamp di waktu tertentu
+            const getUnix = new Date(2004, 9, 31);
+            console.log(getUnix.getTime());
+        }
+
+        {
+            // Parsing date
+            // Untuk membuat date dari string menggunakan method Date.parse(value)
+
+            /*
+            Format Penulisan :
+            YYYY = year
+            MM = Month
+            DD = Day
+            T = Pemisah antara tanggal dan jam
+            HH = Hour
+            mm = minute
+            ss = second
+            sss = millisecond
+            Z = Time Zone
+            YYYY-MM-DDTHH:mm:ss:sssZ
+            */
+
+            const parseTimeStamp = Date.parse("2022-04-04T03:12:12.123+07:00")
+            console.info(parseTimeStamp);
+
+            console.log(new Date(parseTimeStamp));
+        }
+        {
+            // Date Getter dan Setter
+            const date = new Date();
+            date.setFullYear(2021);
+            console.log(date);
+
+            console.log(date.getFullYear());
+            console.log(date.getMonth());
+            console.log(date.getDate());
+            console.log(date.getHours());
+            console.log(date.getMinutes());
+            console.log(date.getMilliseconds());
+            console.log(date.getTimezoneOffset());
+        }
+
+        </script>
+    </body>
+</html>

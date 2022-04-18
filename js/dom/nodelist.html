@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Node Method</title>
+    </head>
+    <body>
+        <ul id="menu1">
+            <li id="first">First</li>
+            <li id="second">Second</li>
+            <li id="third">Third</li>
+        </ul>
+        <ul id="menu2">
+            <li id="satu">satu</li>
+            <li id="dua">dua</li>
+            <li id="tiga">tiga</li>
+        </ul>
+        <script>
+            const list = document.querySelectorAll("li"); // Akan mengambil seluruh li yang ada pada document html
+            console.log(list);
+            console.log(list.item(1).textContent); // second
+
+            const menu1 =  document.getElementById("menu1").childNodes; // Akan mengambil seluruh child yang ada pada id menu1 (yang dikasus ini adalah li)
+            console.log(menu1);
+
+            const menu2 =  document.getElementById("menu2").childNodes;
+            console.log(menu2);
+
+
+        </script>
+    </body>
+</html>

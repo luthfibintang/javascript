@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>For In</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                firstName: "Azisya",
+                middleName: "Luthfi",
+                lastName: "Bintang"
+            };
+
+            for (const property in person) {
+                console.info(`Property ${property} : ${person[property]}`)
+            }
+
+            //for in juga bisa di array, hanya saja berupa index
+
+            const names = ["Azisya", "Luthfi", "Bintang"];
+
+            for (const property in names){
+                document.writeln(`<p>${property} : ${names[property]}</p>`)
+            }
+        </script>
+    </body>
+</html>

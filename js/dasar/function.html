@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Function</title>
+    </head>
+    <body>
+        <script>
+            function name(){
+                document.writeln("<p>Azisya Luthfi Bintang</p>")
+            }
+
+            name();
+            name();
+            name(); // Boleh Berkali kali
+
+            // Memanggil function dengan parameter
+            //parameter boleh lebih dari 1
+            function hello(firstname, lastname){
+                document.writeln(`<p>Hello ${firstname} ${lastname}</p>`)
+            }
+            
+            hello("Ichsan", "Ilyasa");
+
+            // Optional parameter (Parameter pada function itu optional, jika sebuah artinya tidak wajib diisi, jika tidak diisi akan secara defaul parameter tersebut bernilai undefined)
+            hello("Azisya")
+            hello("Azisya", "Luthfi", "Bintang") // jika kelebih dari total param yang ada pada function dia hanya akan mendeteksi 2 pertama (sesuai params), ini bisa dibilang fleksible namun juga berbahaya karna tidak ada pesan error jika berlebihan atau kurang menggunakan parameter
+
+            //Function Return Value
+            // Mengembalikan Value pada function
+
+            //Membuat function dengan parameter dan return value
+            function sayHello(firstname, lastname){
+                const say = `<p>Hello ${firstname} ${lastname}</p>`;
+                return say;
+            }
+
+            // Memanggil function dan menangkap return valuenya
+            const result = sayHello("Hafidah", "Laila");
+            document.writeln(result)
+
+            // Function return value lebih dari satu
+            function getScore(value) {
+                if (value >= 90) {
+                    return "A";
+                } else if(value >= 80) {
+                    return "B"
+                } else if (value >= 70) {
+                    return "C"
+                } else {
+                    return "REMED"
+                }
+            }
+
+            const score = getScore(70);
+            if (score !== "REMED"){
+            console.info(`Nilai kamu ${score}`)
+            } else {
+                console.info(`LO ${score}`)
+            }
+
+
+            // Saat menggunakan return kode program setelahnya tidak akan di eksekusi
+            // contoh
+
+            function isContains(array, searchValue){
+                for(const element of array){
+                    console.info(`Iterasi elemenet ${element}`)
+                    if(element === searchValue){
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            console.info(isContains([1,2,3,4,5,6,7,8,9,10], 7)) // true
+            console.info(isContains([1,2,3,4,5,6,7,8,9,10], 70)) // false
+        </script>
+    </body>
+</html>

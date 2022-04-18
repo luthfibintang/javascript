@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-8">
+        <h2>Daftar Contact</h2>
+        <% if (contacts.length === 0) { %>
+        <p>Data Contact Tidak Ada</p>
+        <% } else { %>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% contacts.forEach((contact, i) => { i++ %>
+                <tr>
+                  <th scope="row"><%= i++ %></th>
+                  <td><%= contact.name  %></td>
+                  <td><%= contact.noHP  %></td>
+                  <td><a href="/contact/<%= contact.name %>" class="btn btn-success badge"><i class="bi bi-info-circle"></i> Detail</a></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+          <% } %> 
+    </div>
+</div>

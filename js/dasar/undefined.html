@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Tipe data string</title>
+    </head>
+    <body>
+        <script>
+            // Variable biasa
+           let name;
+            // name = "Bintang";
+           if (name === undefined){
+               console.info("UNDEFINED")
+           } else {
+               console.info(`Hello ${name}`)
+           }
+
+           // Tipe data array
+           const fname = ["Azisya", "Luthfi"];
+           // fname.push("Bintang")
+           if (fname[2] === undefined){
+               console.info("ARRAY UNDEFINED")
+           } else {
+               console.info("ARRAY DEFINED")
+           }
+
+           // Tipe data object
+           const orang = {}
+        //    orang["name"] = "Budi"
+           if (orang === undefined){
+               console.info("OBJECT UNDEFINED")
+           } else {
+               console.info("OBJECT DEFINED")
+           }
+
+           //NUL
+           // null berbeda dengan undefined, null berarti sudah ada valuenya, hanya saja nilainya null
+           // sedangkan undifined adalah variable yang belum di tambahkan value apapun
+
+           let lastname = null;
+           if (lastname === undefined){
+               document.writeln("LastName Undefined")
+           } else if(lastname === null) {
+               document.writeln("Lastname Null")
+           } else{
+               document.writeln(`Hello ${lastname}`)
+           }
+        </script>
+    </body>
+</html>

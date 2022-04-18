@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Komentar</title>
+    </head>
+    <body>
+        <script>
+            // Kondisi tanpa menggunakan nullish coalescing
+            let parameter;
+            let data = parameter;
+
+            if(data === undefined || data === null){
+                data = "Nilai default"
+            }
+
+            console.info(data)
+
+            // Menggunakan nullish coalescing
+            let data2 = parameter ?? "Pakai Ini Jika parameter tidak ada (default)"
+
+            console.info(data2)
+        </script>
+    </body>
+</html> 

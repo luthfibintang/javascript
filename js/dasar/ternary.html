@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Komentar</title>
+    </head>
+    <body>
+        <script>
+            // Kondisi tanpa menggunakan ternary operator
+            const nilai = 75;
+            let ucapan;
+            if (nilai >= 75){
+                ucapan = "Anda Lulus"
+            } else{
+                ucapan = "Anda tidak lulus"
+            }
+
+            console.info(`${ucapan}`)
+
+            // Menggunakan ternary
+            const value = 75;
+            let greeting = value >= 75 ? "Selamat Anda Lulus" : "Bodoh lu ga lulus"
+            console.info(greeting);
+        </script>
+    </body>
+</html>

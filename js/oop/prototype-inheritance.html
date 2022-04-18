@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Prototype Inheritance</title>
+    </head>
+    <body>
+        <script>
+            // Dalam Javascript sebenarnya sudah tidak di rekomendasikan lagi menggunakan Prototype karna sudah ada class di versi terbaru javascript
+
+            function Employee(name){
+                this.name = name
+            }
+            
+            function Manager(name){
+                this.name = name
+            }
+            
+            // Prototype inheritance yang salah
+            // Manager.prototype = Employee.prototype;
+
+            // Prototype inheritance yang benar
+            Manager.prototype = Object.create(Employee.prototype);
+
+            Manager.prototype.sayHello = function(name) {
+                console.info(`Hello ${name}, my name is Manger ${this.name}`)
+            }
+
+            Employee.prototype.sayHello = function(name) {
+                console.info(`Hello ${name}, my name is Employee ${this.name}`)
+            }
+
+            const employee = new Employee("Ichsan")
+            employee.sayHello("Bintang")
+            
+            const manager = new Manager("Bintang")
+            manager.sayHello("Ichsan")
+            
+            console.log(employee);
+            console.log(manager)
+        </script>
+    </body>
+</html>

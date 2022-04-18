@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Windown</title>
+    </head>
+    <body>
+        <input type="button" onclick="window.open('https://www.youtube.com/')" value="New Window">
+        <p id="desc"></p>
+        <p id="location"></p>
+        <!-- <p id="content"></p> -->
+
+        <script>
+            // const content = document.getElementById("content");
+            const locationParagraph = document.getElementById("location");
+            const content = document.getElementById("desc")
+
+            const height = window.screen.height;
+            const width = window.screen.width;
+            const url = window.location;
+            
+            content.textContent = `Window width : ${width} Window Height : ${height}`;
+            locationParagraph.textContent = url;
+            
+
+        </script>
+    </body>
+</html>

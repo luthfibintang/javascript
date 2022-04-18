@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Set</title>
+    </head>
+    <body>
+        <script>
+            // Set merupakan implementasi dari struktur data yang berisikan data-data unique
+            // set juga ittarable
+            // Kurang Lebih mirip Map hanya saja set keynya harus unique
+
+            const mySet = new Set();
+
+            mySet.add("Azisya")
+            mySet.add("Luthfi")
+            mySet.add("Bintang")
+            mySet.add("Bintang")
+
+            console.log(mySet.has("Azisya")) // True
+
+            console.log(mySet);
+
+            mySet.forEach((value) => console.log(`${value}`))
+
+            mySet.delete("Bintang")
+            console.log(mySet);
+        </script>
+    </body>
+</html>

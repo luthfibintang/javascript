@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Try Finally</title>
+    </head>
+    <body>
+        <script>
+            // Menggunakan try Finally (tanpa catch)
+            class Counter {
+                constructor() {
+                    this.numbers = 1
+                }
+
+                next() {
+                    try {
+                        return this.numbers;
+                    } finally {
+                        this.numbers++;
+                    }
+                }
+            }
+
+            const counter = new Counter();
+            console.info(counter.next());
+            console.info(counter.next());
+            console.info(counter.next());
+            console.info(counter.next());
+            console.info(counter.next());
+            </script>
+    </body>
+</html>

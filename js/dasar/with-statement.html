@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>For Loop </title>
+    </head>
+    <body>
+        <script>
+            
+            const person = {
+                firstName: "Azisya",
+                middleName: "Luhthfi",
+                lastName: "Bintang"
+            };
+            
+            //Tanpa menggunakan with statement
+            console.info(person.firstName);
+            console.info(person.middleName);
+            console.info(person.lastName);
+
+            //menggunakan With
+            with(person){
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+
+            // With sangat menarik dan mempermudah tapi tidak direkomendasikan
+            // Alasannya karna ketika menggunakan with statement membuat code menjadi ambigu
+            // Contohnya
+
+            const firstName = "Ichsan";
+            const lastName = "Ilyasa";
+
+            with(person){
+                console.info(firstName);
+                console.info(lastName);
+            } // Karna sudah di scope jadi access ke variable first&last name jadi tidak bisa, oleh karna itu tidak direkomendasikan
+
+
+        </script>
+    </body>
+</html>

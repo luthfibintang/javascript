@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Property di Class</title>
+    </head>
+    <body>
+        <script>
+            class Person {
+                constructor(name){
+                    this.name = name;
+                    this.greeting = function (time) {
+                        console.log(`Selamat ${time}, Nama saya ${this.name}`)
+                    }
+                }
+            }
+
+            const bintang = new Person("Bintang");
+
+            bintang.greeting("Sore");
+            console.log(bintang);
+
+            class Coba {
+                name = "";
+                sayHello = function sayHello(){
+                    console.info(`Hello ${this.name}`)
+                }
+            }
+
+            Coba.prototype.sayBye = function (){
+                return `Good Bye ${this.name}`
+            }
+            
+            const cek = new Coba();
+            cek.name = "Bintang"
+            cek.sayHello()
+            console.log(cek);
+            
+            console.info(cek.sayBye())
+            </script>
+    </body>
+</html>

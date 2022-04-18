@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>JSON</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                name: "Azisya Luthfi Bintang",
+                address: {
+                    country: "Indonesia",
+                    city: "Tangsel"
+                }
+            }
+
+            // Membuat Object Menjadi String JSON
+            const json = JSON.stringify(person);
+
+            // Membuat String JSON Menjadi Object JS
+            const back = JSON.parse(json);
+
+            console.log(json);
+            console.log(back);
+        </script>
+    </body>
+</html>

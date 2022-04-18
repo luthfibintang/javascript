@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Function di variable</title>
+    </head>
+    <body>
+        <script>
+            function sayHello(name) {
+                console.info(`Hello ${name}`)
+            }
+
+            let say = sayHello;
+
+            // Bisa langsung dengan function seperti biasa
+            sayHello("Bintang")
+
+            // Bisa Menggunakan Variable
+            say("Ichsan")
+            // Variable juga bisa digunakan sebagai value parameter pada function lain, Contoh
+
+            function name(callback) {
+                callback("Fifi");
+            }
+
+            name(sayHello);
+            name(say);
+            
+        </script>
+    </body>
+</html>
