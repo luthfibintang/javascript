@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  width: 415px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #fbfbfb;
+  min-height: 100vh;
+}
+
+@media (max-width: 415px) {
+  .app {
+    width: 100%;
+  }
+}
+
+.brand {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.brand a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+
+.nav-item {
+  display: inline-block;
+  flex: 1 1 0;
+  text-align: center;
+  padding: 14px 0;
+  color: #000;
+  text-decoration: none;
+  border-right: 1px solid #eee;
+  font-size: 14px;
+}
+
+.nav-item:not(:last-child) {
+  border-right: 1px solid #eee;
+}
+
+.section {
+  padding: 20px 25px;
+}
+
+.section-title {
+  margin-top: 0;
+}
+
+.section-description {
+  line-height: 26px;
+  text-align: justify;
+}
+
+.section-list {
+  list-style-type: none;
+  margin-left: -30px;
+}
+
+.articles {
+  border-top: 1px solid #eee;
+}
+
+.article {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+}
+
+.article-title {
+  margin-top: 0;
+}
+
+.article-title a {
+  color: #000;
+  text-decoration: none;
+}
+
+.article.title a:hover {
+  color: blue;
+}
+
+.article-date {
+  color: #999;
+  font-size: 14px;
+}
+
+.article-image {
+  max-width: 100%;
+  margin: 23px 0;
+}
+
+.article-summary {
+  line-height: 26px;
+  margin-top: 0;
+}
+
+.article-source {
+  color: #999;
+}
+
+
+

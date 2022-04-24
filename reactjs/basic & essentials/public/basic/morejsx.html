@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const root = document.getElementById("root");
+        const name = "Azisya Luthfi Bintang";
+        const sayHello = (name) => {
+            return `Hello ${name}`
+        }
+
+        function ngegas(text) {
+            return text.toUpperCase();
+        }
+
+        // const element = ( <h1>{ngegas(name)} </h1> )
+        
+        // const element2 = ( <p> {new Date().toLocaleDateString()} </p> )
+
+        // Menambahkan className
+        // const element = ( <h1 className="heading-1">{ngegas(name)}</h1> )
+
+        // Menggunakan className 2
+        // const heading = "heading";
+        // const element = ( <h1 className={heading}>{ngegas(name)}</h1> )
+        
+        // Image
+
+        const element = (<img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="" />)
+
+        // ReactDOM.render(element, root);
+        ReactDOM.render(element, root);
+    </script>
+</body>
+</html>

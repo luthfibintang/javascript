@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const root = document.getElementById("root");
+
+        // Membuat list fruits
+
+        // const li1 = React.createElement("li", {
+        //     children: "Apple"
+        // })
+
+        // const li2 = React.createElement("li", {
+        //     children: "orange"
+        // })
+        // const element = React.createElement("ul", {className : "fruits"}, li1,li2)
+
+        // Cara cepat
+        const element = (
+            <ul>
+                <li>Apple</li>
+                <li>orange</li>
+                <li>Grape</li>
+            </ul>
+        )
+
+        ReactDOM.render(element, root);
+    </script>
+</body>
+</html>
