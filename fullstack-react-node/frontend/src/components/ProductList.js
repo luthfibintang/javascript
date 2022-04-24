@@ -38,8 +38,13 @@ const ProductList = () => {
                         <td>{product.title}</td>
                         <td>{product.price}</td>
                         <td>
-                            <Link to={`/edit/${product.id}`} className='button is-small is-info'>Edit</Link>
-                            <button className='button is-small is-danger' onClick={() => deleteProduct(product.id)}>delete</button>
+                            {/* Jika menggunakan mysql */}
+                            {/* <Link to={`/edit/${product.id}`} className='button is-small is-info'>Edit</Link>  */}
+
+                            {/* Jika menggunakan mongodb (sama halnya dengan delete) */}
+                            <Link to={`/edit/${product._id}`} className='button is-small is-info'>Edit</Link>
+
+                            <button className='button is-small is-danger' onClick={() => deleteProduct(product._id)}>delete</button>
                         </td>
                     </tr>
                 ))}
